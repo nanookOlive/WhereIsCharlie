@@ -7,6 +7,8 @@ use App\Entity\Users;
 
 use App\Service\CoordService;
 
+use App\Service\UserProxByCal;
+use App\Repository\UsersRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -66,7 +68,19 @@ class UsersController extends AbstractController
         return $this->json('Enregistrement du user ok ',Response::HTTP_OK);
     }
        
+#[Route('/test/lat/{id}','app_test')]
+public function lat(Users $user,UserProxByCal $cal):JsonResponse{
 
+
+    
+
+        $response[$user->getAddrees()]=$cal->valideUser($user,2);
+    
+
+
+    return $this->json($response);
+
+}
 
     
 }

@@ -21,16 +21,22 @@ class AppFixtures extends Fixture
         //on va set leur longitude et leur latitute 
         //à partir d'une adresse envoyé en json lors de l'inscritpion d'un user
         //on pourrait imaginer un event listener ou entity listener pour set lon et lat 
-        //un tableau d'adresse 
+        
+        /**
+         * tableau d'adresses vraient ou faussent selon rayon=2km
+         * table
+         */
 
-        // TODO feed $arrayAddress
         $arrayAddress=[
-            '1 rue Ameline Nantes',
-            '224 boulevard Schuman Nantes',
-            '72 boulevard des Anglais Nantes',
-            '26 Boulevard de la Chauviniere Nantes',
-            '12 rue Alexandre Fourny Nantes',
-            '1O rue Amiral Courbet Nantes'
+            '1 rue Ameline Nantes',//Origine
+            '23 Rue Emile Souvestre Nantes', //TRUE ouest
+            '19 Rue Louis Primault Nantes', //TRUE est
+            '111 Boulevard Michelet Nantes',//TRUE nord
+            '1 Rue de Bel air Nantes',//TRUE sud
+            '24 Rue Recteur Schmitt Nantes',//FALSE nord
+            '16 rue de Rieux Nantes',//FALSE sud
+            '134 Boulevard des Anglais Nantes',//FALSE ouest
+            '66 Bd des Poilus Nantes',//FALSE est
         ];
 
        
