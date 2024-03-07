@@ -1,2 +1,3 @@
-service créé afin de récupérer les coordonées gps via une api de gécoding 
-set les valeurs dans l'objet user lors d'un appel d'un listener quand création user
+# WhereIsCharlie(*Symfony-projet étude*)
+
+_WhereIsCharlie est un service que j'ai réalisé pour une autre application. Il permet de récupérer les coordonnées GPS d'une adresse via un appel vers une API de géocoding. Il permet aussi de valider si des coordonnées GPS sont dans un rayon d'une valeur et d'une origine déterminé par l'application. Ce service est appelé via un eventListener (pré-persist)._
